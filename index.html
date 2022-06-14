@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="stil.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Ana Sayfa</title>
+    
+</head>
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Yukarı Çık !">↑</button>
+
+    <div class="container">
+      <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+
+        <div class="row vw-100 justify-content-md-center" style="height:650px;" >
+
+          <div class="col-md-5 rounded-start" style="background-color: #1b1a1a;">
+
+            <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+           
+                <div class="d-flex flex-column h-75 align-items-center justify-content-center">
+                    <img class="home_img h-75" src="img/cd.png" alt="" srcset="">
+                </div>
+
+                <div class="d-flex flex-column h-25 align-items-center ">
+                  <h1 class="home_name">Ben<span class="txt-rotate" data-period="100" 
+                  data-rotate='[ " Cengizhan Durmuş", " Web Tasarımcıyım", " Front-End Geliştiriciyim" ]'></span></h1>
+                </div>
+
+                <div class="d-flex flex-column h-25 align-items-center justify-content-center">
+                  <p class="home_info">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Ex, autem, cupiditate saepe voluptate asperiores natus.
+                  </p>
+                  <hr class="home_hr">
+                </div>
+
+                <div class="d-flex flex-column h-25 align-items-center">
+
+                  <div id="home_icon" class="d-flex justify-content-xxl-around" >
+
+                    <div>
+                      <a href="https://www.instagram.com/cengizhnx/" target="new" class="icon">
+							        <img src="img/icon/instagram.png" width="41" height="41" class="img">
+							        <img class="img-top" src="img/icon/instagram (1).png" width="41" height="41" title="Instagram">
+                      </a>
+                    </div>
+
+                    <div>
+                      <a href="https://twitter.com/Cengizhnx_" target="new" class="icon">
+                      <img src="img/icon/twitter.png" width="41" height="41" class="img" title="Twitter">
+                      <img class="img-top" src="img/icon/twitter (1).png" width="41" height="41" title="Twitter">
+                      </a>
+                    </div>
+
+                    <div>
+                      <a href="https://linkedin.com/in/cengizhan-durmuş-404718212/" target="new" class="icon">
+                      <img src="img/icon/linkedin.png" width="41" height="41" class="img" title="Linkedn">
+                      <img class="img-top" src="img/icon/linkedin (1).png" width="41" height="41" title="Linkedn">
+                      </a>
+                    </div>
+
+                    <div>
+                      <a href="https://github.com/Cengizhnx" target="new" class="icon">
+                      <img src="img/icon/github.png" width="41" height="41" class="img" title="GitHub">
+                      <img class="img-top" src="img/icon/github (1).png" width="41" height="41" title="GitHub">
+                      </a>
+                    </div>
+                     
+                  </div>
+                    
+                </div>
+
+            </div>
+            
+          </div>
+
+          <div class="col-md-5 h-100 rounded-end overflow-auto" style="background-color: #fafafa;">
+
+            <div class="d-flex flex-row align-items-start justify-content-center" >
+              
+              <div><h5 class="p-lg-4 p-3"><a href="#one" class="home_menu line">Ana Sayfa</a></h5></div>
+              <div><h5 class="p-lg-4 p-3"><a href="#two" class="home_menu line">Özgeçmiş</a></h5></div>
+              <div><h5 class="p-lg-4 p-3"><a href="#three" class="home_menu line">Portfolyo</a></h5></div>
+              <div><h5 class="p-lg-4 p-3"><a href="#four" class="home_menu line">İletişim</a></h5></div>
+              
+            </div>
+            
+            <div id="one" class="container-fluid h-100 text-white">
+            </div>
+
+            <hr class="bg-dark">
+
+            <div id="two" class="container-fluid h-100 bg-success text-white">
+              <h1 class="home_p p-3">Özgeçmiş</h1>
+              <p class="home_p"></p>
+            </div>
+            <hr class="bg-dark">
+
+            <div id="three" class="container-fluid h-100 bg-primary text-white">
+              <h1 class="home_p p-3">Section 2</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            
+            <hr class="bg-dark">
+
+            <div id="four" class="container-fluid h-100 bg-warning text-white">
+              <h1 class="home_p p-3">Section 3</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
