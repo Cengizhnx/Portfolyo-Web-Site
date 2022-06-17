@@ -24,16 +24,14 @@
 
 <body>
 
-  <div class="toggle" onclick="toggleMenu()"></div>
-
-  <button onclick="topFunction()" id="myBtn" title="Yukarı Çık !">↑</button>
 
   <div class="container">
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 
       <div class="row vw-100 justify-content-md-center" style="height:650px;">
+        <div class="toggle" style="width: 50px;" onclick="toggleMenu()"></div>
 
-        <div class="div_left col-md-5 rounded-start" style="background-color: #1b1a1a;">
+        <div class="div_left col-md-5 rounded-start" id="div_left" style="background-color: #1b1a1a;">
 
           <div class="d-flex flex-column h-100 align-items-center justify-content-center">
 
@@ -93,7 +91,7 @@
 
         </div>
 
-        <div class="div_right col-md-5 h-100 rounded-end overflow-auto" style="background-color: #fafafa;">
+        <div class="div_right col-md-5 h-100 rounded-end overflow-auto" id="div_right" style="background-color: #fafafa;">
 
           <div class="d-flex flex-row align-items-start justify-content-center">
 
@@ -221,35 +219,16 @@
     </div>
   </div>
 
-  <div class="sidebar">
+  <div class="sidebar d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <ul class="menu">
-      <li><a href="#">Ana Sayfa</a></li>
-      <li><a href="#"></a>Özgeçmiş</li>
-      <li><a href="#"></a>Portfolyo</li>
-      <li><a href="#"></a>İletişim</li>
+      <li><a href="#one" class="line" onclick="hidevisible_home()">Ana Sayfa</a></li>
+      <li><a href="#two" class="line" onclick="hidevisible_menu()">Özgeçmiş</a></li>
+      <li><a href="#three" class="line" onclick="hidevisible_menu()">Portfolyo</a></li>
+      <li><a href="#four" class="line" onclick="hidevisible_menu()">İletişim</a></li>
     </ul>
   </div>
 
   <script>
-    //Get the button
-    var mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
 
     function toggleMenu(){
       const menuToggle = document.querySelector('.toggle');
@@ -257,9 +236,18 @@
 
       const sidebar = document.querySelector('.sidebar');
       sidebar.classList.toggle('active');
+    }
 
-      const div_left = document.querySelector('.div_left');
-      div_left.classList.toggle('active');
+    function hidevisible_menu(){
+      document.getElementById("div_left").style.display="none";
+      document.getElementById("div_right").style.display="block";
+      toggleMenu();
+    }
+
+    function hidevisible_home(){
+      document.getElementById("div_left").style.display="block";
+      document.getElementById("div_right").style.display="none";
+      toggleMenu();
     }
   </script>
 
