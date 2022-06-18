@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body{
   background-image: linear-gradient(to right bottom, #ffffff, #e2e2e2, #c6c6c6, #aaaaaa, #8f8f8f, #7c7c7d, #6a6a6b, #595859, #4a494a, #3c3b3b, #2e2d2d, #212020);
@@ -152,29 +153,43 @@ body{
 /* Scroll Top */
 
 
+ /* Sidebar Name Brush*/ 
+  .highlight {
+  background: url(https://www.andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 8px 0;
+  font-size: 2.9em;
+  margin-bottom: 50px;
+  margin-left: -25px;
+  font-family: 'Pacifico', cursive;
+  color: #000;
+  }
+ /* Sidebar Name Brush*/ 
+
+
 /* Toggle */ 
 
 .toggle{
   visibility: hidden;
   position: absolute;
-  top: 50px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: rgb(0, 0, 0) url(img/icon/menu.png);  /* #1b1a1a */
+  top: 10px;
+  right: 5px;
+  height: 40px;
+  background: url(img/icon/menu.png);  /* #1b1a1a */
   background-repeat: no-repeat;
-  background-size: 33px;
+  background-size: 27.5px;
   background-position: center;
   cursor: pointer;
   z-index: 100;
-  border-radius: 10px;
 }
 
 .toggle.active{
-  background: rgb(0, 0, 0) url(img/icon/close.png);
-  background-size: 30px;
+  background: url(img/icon/close.png);
+  background-size: 27.5px;
   background-position: center;
   background-repeat: no-repeat;
+  filter: invert(100%);
 }
 
 /* Toggle */ 
@@ -204,10 +219,13 @@ body{
   padding: 40px;
   z-index: 99;
   right: -100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .sidebar.active{
   right: 0%;
+  
 }
 
 .sidebar ul{
@@ -219,7 +237,8 @@ body{
 
 .sidebar ul li{
   list-style-type: none;
-  margin: 10px 0;
+  padding: 17.5px;
+
 }
 
 .sidebar ul li a{
@@ -231,6 +250,7 @@ body{
   text-transform: capitalize;
   font-family: 'Cairo', sans-serif;
   letter-spacing: 2px;
+  margin-left: -25px;
 }
 
 /* Sidebar */
@@ -279,7 +299,7 @@ body{
   }
 
   .home_hr{
-    width: 85%;
+    width: 70%;
   }
 
   .div_name{
@@ -287,11 +307,26 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
   }
 
   .div_name .home_name{
     font-size: 28px;
+    padding: 35px;
+    background:
+    linear-gradient(to right, white 2px, transparent 2px) 0 0,
+    linear-gradient(to right, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
   }
+
 }
 
 
@@ -306,11 +341,11 @@ body{
   }
 
   .div_info{
-    width: 80%;
+    width: 85%;
   }
 
   .home_info{
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .home_hr{
@@ -318,16 +353,38 @@ body{
   }
 
   .div_name{
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 35px;
   }
 
   .div_name .home_name{
-    font-size: 24px;
+    font-size: 25px;
+
+    padding: 30px;
+    background:
+    linear-gradient(to right, white 2px, transparent 2px) 0 0,
+    linear-gradient(to right, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+  }
+  
+  .sidebar ul li a{
+    font-size: 1.7em;
   }
 
+  .highlight {
+    font-size: 2.1em;
+    }
 }
 
 @media (max-width:365px) {
@@ -337,15 +394,22 @@ body{
   }
 
   .div_social{
-    width: 50%;
+    width: 55%;
+    margin-left: 15px;
   }
+  
+  .div_social img{
+    width: 65%;
+    height: 65%;
+  }
+
 
   .div_info{
     width: 80%;
   }
 
   .home_info{
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .home_hr{
@@ -353,14 +417,76 @@ body{
   }
 
   .div_name{
-    width: 80%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   .div_name .home_name{
-    font-size: 20px;
+    font-size: 22px;
+
+    padding: 25px;
+    background:
+    linear-gradient(to right, white 2px, transparent 2px) 0 0,
+    linear-gradient(to right, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
   }
 
+  .sidebar ul li a{
+    font-size: 1.5em;
+  }
+
+  .highlight {
+    font-size: 1.6em;
+    }
+
+}
+
+@media (max-width:320px) {
+
+  .div_social{
+    width: 50%;
+  }
+  
+  .div_social img{
+    width: 50%;
+    height: 50%;
+  }
+
+  
+  .div_name .home_name{
+    font-size: 18px;
+
+    padding: 25px;
+    background:
+    linear-gradient(to right, white 2px, transparent 2px) 0 0,
+    linear-gradient(to right, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, white 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, white 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 7.5px 7.5px;
+  }
+
+  .sidebar ul li a{
+    font-size: 1.3em;
+  }
+
+  .highlight {
+    font-size: 1.5em;
+    }
 }
