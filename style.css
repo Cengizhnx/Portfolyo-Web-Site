@@ -211,7 +211,7 @@ body{
 
 .sidebar{
   position: fixed;
-  background: #fafafa;
+  background: #fafafa url(img/139733.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,6 +338,12 @@ body{
 
   .div_social{
     width: 65%;
+    margin-left: 15px;
+  }
+
+  .div_social img{
+    width: 70%;
+    height: 70%;
   }
 
   .div_info{
