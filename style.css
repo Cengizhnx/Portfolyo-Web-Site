@@ -499,6 +499,17 @@ body{
 
 /* Timeline */
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 96%;
+  width: 2px;
+  background: gray;
+}
+
 .timeline {
   width: 100%;
   height: auto;
@@ -506,12 +517,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .timeline ul {
   width: 100%;
   list-style-type: none;
-  height: 377px;
+  height: 100%;
 }
 
 .timeline ul li {
@@ -521,6 +533,7 @@ body{
   color: white;
   margin-bottom: 20px;
   height: 125px;
+  width: 50%;
 }
 
 .timeline ul li:last-child {
@@ -552,40 +565,68 @@ body{
   margin-bottom: 10px;
   letter-spacing: 2px;
   color: #000;
+  position: absolute;
+  top: -25px;
 }
 
-@media only screen and (min-width: 768px) {
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background: gray;
-  }
+.timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-35px);
+  border-radius: 20px 0 20px 20px;
+}
+.timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(5px);
+  border-radius: 0 20px 20px 20px;
+}
+
+@media only screen and (max-width: 768px) {
 
   .timeline ul li {
-    width: 50%;
-    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #1e1f22;
+    color: white;
+    margin-bottom: 20px;
+    height: 125px;
+    width: 100%;
+    margin: 50px 0px;
   }
 
-  .timeline ul li:nth-child(odd) {
-    float: left;
-    clear: right;
-    transform: translateX(-35px);
-    border-radius: 20px 0 20px 20px;
+  .timeline::before {
+    display: none; 
   }
-  .timeline ul li:nth-child(even) {
-    float: right;
-    clear: left;
-    transform: translateX(5px);
-    border-radius: 0 20px 20px 20px;
+
+  .timeline ul{
+    height: 100%;
   }
+
+  .timeline {
+    margin-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  .timeline-content h1 {
+    font-size: 16px;
+  }
+  
+  .timeline-content p {
+    font-size: 12.5px;
+  }
+
   .timeline-content .date {
-    position: absolute;
-    top: -25px;
+    font-size: 11px;
   }
+
+  .timeline {
+    margin-top: 0;
+  }
+
 }
 
 /* Timeline */
